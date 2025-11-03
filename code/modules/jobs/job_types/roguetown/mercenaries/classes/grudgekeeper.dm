@@ -51,6 +51,7 @@
 		pants = /obj/item/clothing/under/roguetown/trou/leather
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/full/dwarven/capt
 		head = /obj/item/clothing/head/roguetown/helmet/heavy/dwarven/capt
+		mask = /obj/item/clothing/head/roguetown/paddedcap
 		backpack_contents = list(
 			/obj/item/roguekey/mercenary,
 			/obj/item/storage/belt/rogue/pouch/coins/poor,
@@ -83,39 +84,77 @@
 				H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
 				H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 
-/obj/item/clothing/suit/roguetown/armor/plate/full/dwarven/capt
+/obj/item/clothing/suit/roguetown/armor/plate/full/dwarvencapt
 	name = "grudgekeeper dwarven plate"
+	desc = "A standard, layered plate worn by many dwarven troops. It cannot be worked on without intrinsic dwarven knowledge."
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
+	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/mountain)
 	icon_state = "dwarfchest_red"
 	item_state = "dwarfchest_red"
+	armor = ARMOR_GRUDGEBEARER
+	prevent_crits = list(BCLASS_TWIST)
+	body_parts_covered = CHEST|GROIN|VITALS|ARMS|LEGS
+	equip_delay_self = 5 SECONDS
+	unequip_delay_self = 5 SECONDS
+	equip_delay_other = 4 SECONDS
+	strip_delay = 12 SECONDS
+	smelt_bar_num = 4
+	max_integrity = 1000	//They have their own unique integrity
 
-/obj/item/clothing/suit/roguetown/armor/plate/full/dwarven/capt/ComponentInitialize()
+/obj/item/clothing/suit/roguetown/armor/plate/full/dwarvencapt/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/layeredarmor/grudgekeeper)
 
-/obj/item/clothing/head/roguetown/helmet/heavy/dwarven/capt
+/obj/item/clothing/head/roguetown/helmet/heavy/dwarvencapt
 	name = "grudgekeeper dwarven helm"
+	body_parts_covered = (HEAD | MOUTH | NOSE | EYES | EARS | NECK)	//This specifically omits hair so you could hang your beard out of the helm
+	armor = ARMOR_GRUDGEBEARER
+	prevent_crits = list(BCLASS_TWIST)
+	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/mountain)
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
 	icon_state = "dwarfhead_red"
 	item_state = "dwarfhead_red"
+	block2add = FOV_BEHIND
+	bloody_icon = 'icons/effects/blood64.dmi'
+	smeltresult = /obj/item/ingot/steel
+	max_integrity = 1000
+	experimental_inhand = FALSE
+	experimental_onhip = FALSE
 
-/obj/item/clothing/head/roguetown/helmet/heavy/dwarven/capt/ComponentInitialize()
+/obj/item/clothing/head/roguetown/helmet/heavy/dwarvencapt/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/layeredarmor/grudgekeeper/helmet)
 
-/obj/item/clothing/gloves/roguetown/plate/dwarven/capt
+/obj/item/clothing/gloves/roguetown/plate/dwarvencapt
 	name = "grudgekeeper dwarven gauntlets"
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
+	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/mountain)
+	prevent_crits = list(BCLASS_TWIST)
 	icon_state = "dwarfhand_red"
 	item_state = "dwarfhand_red"
+	armor = ARMOR_GRUDGEBEARER
+	max_integrity = 1000
 
-/obj/item/clothing/gloves/roguetown/plate/dwarven/capt/ComponentInitialize()
+/obj/item/clothing/gloves/roguetown/plate/dwarvencapt/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/layeredarmor/grudgekeeper/limbs)
 
-/obj/item/clothing/shoes/roguetown/boots/armor/dwarven/capt
-	name = "grudgekeeper dwarven boots"
+/obj/item/clothing/shoes/roguetown/boots/armor/dwarvencapt	
+	name = "grudgebearer dwarven boots"
+	desc = "Clatters mightily. It is covered in protective layers."
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
+	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/mountain)
+	prevent_crits = list(BCLASS_TWIST)
 	icon_state = "dwarfshoe_red"
 	item_state = "dwarfshoe_red"
+	armor = ARMOR_GRUDGEBEARER
+	max_integrity = 1000
 
-/obj/item/clothing/shoes/roguetown/boots/armor/dwarven/capt/ComponentInitialize()
+/obj/item/clothing/shoes/roguetown/boots/armor/dwarvencapt/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/layeredarmor/grudgekeeper/limbs)
 

@@ -54,6 +54,7 @@
 		gloves = /obj/item/clothing/gloves/roguetown/plate/dwarven
 		pants = /obj/item/clothing/under/roguetown/trou/leather
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half
+		mask = /obj/item/clothing/head/roguetown/paddedcap
 		r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 		backpack_contents = list(
 			/obj/item/roguekey/mercenary,
@@ -108,6 +109,7 @@
 		pants = /obj/item/clothing/under/roguetown/trou/leather
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/full/dwarven
 		head = /obj/item/clothing/head/roguetown/helmet/heavy/dwarven
+		mask = /obj/item/clothing/head/roguetown/paddedcap
 		backpack_contents = list(
 			/obj/item/roguekey/mercenary,
 			/obj/item/storage/belt/rogue/pouch/coins/poor,
