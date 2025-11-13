@@ -9,13 +9,14 @@
 	traits_applied = list(TRAIT_RITUALIST, TRAIT_ARCYNE_T2)
 	cmode_music = 'sound/music/combat_mastermind.ogg' //evil ass mastermind music
 	extra_context = "Choose between 2 options: being an EVIL mastermind or a WRETCHED servant" //choose between master and servant
+	maximum_possible_slots = 5 // We can toil a LOT but if the entire wretch slot is just omnicrafters this will become problematic
 
 	// balance isn't real i picked these bc they're funny
 	subclass_stats = list(
 		STATKEY_STR = -1, //YOU ARE WRETCHED!!!
 		STATKEY_CON = -2, //AND YOU WILL +TOIL+!!!!!!!!!!!
-		STATKEY_INT = 4, //4 int so you can be a feintbeast with the master swordskill I'm giving yo-HAHAHAHAHA JUST KIDDING! GRIND EXPERT ALCHEMY, WORMS!!!
-		STATKEY_PER = 2, //i like looking into the distance
+		STATKEY_INT = 2, //4 int so you can be a feintbeast with the master swordskill I'm giving yo-HAHAHAHAHA JUST KIDDING! GRIND EXPERT ALCHEMY, WORMS!!!
+		STATKEY_PER = 1, //i like looking into the distance
 		STATKEY_END = 1, //i want this to be lower because i like hearing the stamout sfx but i will allow you ONE point of END
 	)
 
@@ -66,6 +67,9 @@
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 	switch(classchoice)
 		if("MALICIOUS Mastermind")
+			//stats
+			H.STAINT += 2
+			H.STAPER =+ 1
 			//orders and stuff. you're the MASTERMIND!
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/order/retreat)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/order/bolster)
@@ -101,6 +105,9 @@
 			H?.mind.adjust_spellpoints(12)
 
 		if("SNIVELLING servant")
+			//stats
+			H.STACON += 2
+			H.STAEND =+ 1
 			//maximum TOIL!!!
 			H.adjust_skillrank_up_to(/datum/skill/labor/lumberjacking, SKILL_LEVEL_EXPERT, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/craft/cooking, SKILL_LEVEL_EXPERT, TRUE)
