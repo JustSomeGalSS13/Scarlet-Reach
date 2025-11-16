@@ -12,9 +12,9 @@
 /datum/sex_action/tailgrope/can_perform(mob/living/user, mob/living/carbon/human/target)
 	if(user == target)
 		return FALSE
-	if(!user.getorganslot(ORGAN_SLOT_TAIL) && !islamia(user))
+	if(!user.Adjacent(target))
 		return FALSE
-	if(!check_location_accessible(user, target, check_zone(user.zone_selected), TRUE))
+	if(!user.getorganslot(ORGAN_SLOT_TAIL) && !islamia(user))
 		return FALSE
 	return TRUE
 
