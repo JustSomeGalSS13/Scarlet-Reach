@@ -414,6 +414,8 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 		else if(ranged_ability_user.STAINT < SPELL_SCALING_THRESHOLD)
 			var/diff2 = SPELL_SCALING_THRESHOLD - ranged_ability_user.STAINT
 			recharge_time = initial(recharge_time) + (initial(recharge_time) * (diff2 * COOLDOWN_REDUCTION_PER_INT))
+			
+	START_PROCESSING(SSfastprocess, src)
 
 /obj/effect/proc_holder/spell/process()
 	if(charge_counter <= recharge_time) // Edge case when charge counter is set
