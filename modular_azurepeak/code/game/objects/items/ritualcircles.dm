@@ -410,7 +410,7 @@
 				to_chat(user,span_smallred("I have performed enough rituals for the day... I must rest before communing more."))
 				return
 			if(do_after(user, 50))
-				user.say("I pray for strenght...")
+				user.say("I pray for strength...")
 				playsound(loc, 'sound/vo/mobs/vw/idle (1).ogg', 100, FALSE, -1)
 				if(do_after(user, 50))
 					user.say("I pray for pain...")
