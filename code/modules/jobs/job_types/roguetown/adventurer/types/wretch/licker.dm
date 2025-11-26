@@ -9,6 +9,12 @@
 		TRAIT_STEELHEARTED,
 		TRAIT_SILVER_WEAK,
 	)
+	disallowed_races = list(
+		/datum/species/harpy,
+		/datum/species/lamia,
+		/datum/species/golem/metal,
+		/datum/species/golem/porcelain,
+	)
 	maximum_possible_slots = 2
 	applies_post_equipment = FALSE
 
