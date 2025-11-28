@@ -626,8 +626,6 @@
 		return
 	if(has_gravity(src))
 		playsound(src, "bodyfall", 100, TRUE)
-		faller.drop_all_held_items()
-		return
 	if(!faller.mind)
 		faller.drop_all_held_items()
 	else
