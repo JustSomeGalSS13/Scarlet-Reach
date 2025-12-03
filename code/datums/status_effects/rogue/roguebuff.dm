@@ -1444,16 +1444,6 @@
 	effectedstats[STATKEY_STR] = arguments[2]
 	. = ..()
 
-/datum/status_effect/buff/potence/on_apply()
-	. = ..()
-	if(effectedstats = list(STATKEY_STR > 2))
-		ADD_TRAIT(owner, TRAIT_STRENGTH_UNCAPPED, id)
-
-
-/datum/status_effect/buff/potence/on_remove()
-	. = ..()
-	REMOVE_TRAIT(owner, TRAIT_STRENGTH_UNCAPPED, id)
-
 /datum/status_effect/buff/fotv
 	id = "fotv"
 	alert_type = /atom/movable/screen/alert/status_effect/buff

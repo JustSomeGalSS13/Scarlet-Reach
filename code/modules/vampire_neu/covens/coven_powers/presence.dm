@@ -31,9 +31,9 @@
 	var/difference = mypower - theirpower
 
 	if(difference < -2)
-			to_chat(target, "<span class='userlove'><b>You hesitate for a moment.</b></span>")
-			target.visible_message(span_suicide("[target] hesitates for a moment."))
-			target.Immobilize(1)
+		to_chat(target, "<span class='userlove'><b>You hesitate for a moment.</b></span>")
+		target.visible_message(span_suicide("[target] hesitates for a moment."))
+		target.Immobilize(1)
 	target.remove_overlay(MUTATIONS_LAYER)
 	var/mutable_appearance/presence_overlay = mutable_appearance('icons/effects/clan.dmi', "presence", -MUTATIONS_LAYER)
 	presence_overlay.pixel_z = 1
