@@ -20,7 +20,7 @@
 #define GENERATION_MODIFIER 1
 
 /// Maximum thralls a neonate vampire can have at any given time
-#define THRALLS_PER_NEONATE 1
+#define THRALLS_PER_NEONATE 2
 
 #define COVENS_PER_CLAN 3
 #define COVENS_PER_WRETCH_CLAN 2
