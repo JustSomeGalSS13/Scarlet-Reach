@@ -288,16 +288,30 @@
 	var/mob/living/carbon/human/HU = user
 	if (isturf(target) || user == target)
 		// RMB on turf or self: DEFEND.
-		HU.attempt_riposte(user, target)
-		HU.changeNext_move(0.5 SECONDS)
-		return
+		if (!HU.has_status_effect(/datum/status_effect/debuff/clashcd))
+			HU.attempt_riposte(user, target)
+			HU.changeNext_move(0.5 SECONDS)
+			return
 	
+	var/mob/living/carbon/human/HT
 	if (ismob(target) && user != target)
-		// RMB on mob (priority 0): has something grappled us, and can we kick? if so, attempt a kick.
+		if (ishuman(target))
+			HT = target
+
+		// RMB on mob (priority 0): check to see if a bait has any chance to succeed (match targeting zones between us and the target), if so, attempt it (ONLY check for matching zones, nothing else).
+		if (HT)
+			var/target_zone = HT.zone_selected
+			var/user_zone = HU.zone_selected
+			if (target_zone && user_zone && (target_zone != BODY_ZONE_CHEST && user_zone != BODY_ZONE_CHEST) && target_zone == user_zone)
+				HU.attempt_bait(user, target)
+				HU.changeNext_move(0.5 SECONDS)
+				return
+		
+		// RMB on mob (priority 1): has something grappled us (passively), and can we kick? if so, attempt a kick.
 		if (!HU.IsOffBalanced())
 			var/mob/kick_target
 			for(var/obj/item/grabbing/G in HU.grabbedby)
-				if(G.grabbee)
+				if(G.grabbee && G.grab_state == GRAB_PASSIVE)
 					kick_target = G.grabbee
 					break
 			if (kick_target)
@@ -305,23 +319,12 @@
 				HU.changeNext_move(0.5 SECONDS)
 				return
 
-		if (ishuman(target))
-			var/mob/living/carbon/human/HT = target
-			var/target_zone = HT.zone_selected
-			var/user_zone = HU.zone_selected
+		// RMB on mob (priority 2): is the target off-balance and not knocked over? if so, kick them over.
+		if (HT && HT.IsOffBalanced() && (HT.mobility_flags & MOBILITY_STAND))
+			HU.try_kick(target)
+			HU.changeNext_move(0.5 SECONDS)
+			return
 
-			// RMB on mob (priority 1): is the target off-balance and not knocked over? if so, kick them over.
-			if (HT.IsOffBalanced() && (HT.mobility_flags & MOBILITY_STAND))
-				HU.try_kick(target)
-				HU.changeNext_move(0.5 SECONDS)
-				return
-
-			// RMB on mob (priority 2): check to see if a bait has any chance to succeed (match targeting zones between us and the target), if so, attempt it (ONLY check for matching zones, nothing else).
-			if (target_zone == user_zone)
-				HU.attempt_bait(user, target)
-				HU.changeNext_move(0.5 SECONDS)
-				return
-		
 		// RMB on mob (priority 3): attempt a feint if possible and off cooldown.
 		if (!HU.has_status_effect(/datum/status_effect/debuff/feintcd))
 			HU.attempt_feint(user, target)
