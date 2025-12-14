@@ -76,6 +76,55 @@
 		update_hair()
 	if(updates & PENDING_UPDATE_DAMAGE)
 		update_damage_overlays()
+	if(updates & PENDING_UPDATE_INV_HANDS)
+		update_inv_hands()
+	if(updates & PENDING_UPDATE_INV_GLOVES)
+		update_inv_gloves_real()
+	if(updates & PENDING_UPDATE_INV_SHOES)
+		update_inv_shoes_real()
+	if(updates & PENDING_UPDATE_INV_HEAD)
+		update_inv_head_real()
+	if(updates & PENDING_UPDATE_INV_BELT)
+		update_inv_belt_real()
+	if(updates & PENDING_UPDATE_INV_BACK)
+		update_inv_back_real()
+	if(updates & PENDING_UPDATE_INV_ARMOR)
+		update_inv_armor_real()
+	if(updates & PENDING_UPDATE_INV_SHIRT)
+		update_inv_shirt_real()
+	if(updates & PENDING_UPDATE_INV_PANTS)
+		update_inv_pants_real()
+	if(updates & PENDING_UPDATE_INV_CLOAK)
+		update_inv_cloak_real()
+
+// Base implementations for carbon mobs - these are just stubs in case someone makes a non-human carbon mob some day
+// /mob/living/carbon/human will override these
+/mob/living/carbon/proc/update_inv_gloves_real()
+	return
+
+/mob/living/carbon/proc/update_inv_shoes_real()
+	return
+
+/mob/living/carbon/proc/update_inv_head_real()
+	return
+
+/mob/living/carbon/proc/update_inv_belt_real()
+	return
+
+/mob/living/carbon/proc/update_inv_back_real()
+	return
+
+/mob/living/carbon/proc/update_inv_armor_real()
+	return
+
+/mob/living/carbon/proc/update_inv_shirt_real()
+	return
+
+/mob/living/carbon/proc/update_inv_pants_real()
+	return
+
+/mob/living/carbon/proc/update_inv_cloak_real()
+	return
 
 /mob/living/carbon/regenerate_icons()
 	if(notransform)

@@ -431,6 +431,9 @@ There are several things that need to be remembered:
 
 
 /mob/living/carbon/human/update_inv_gloves()
+	queue_icon_update(PENDING_UPDATE_INV_GLOVES)
+
+/mob/living/carbon/human/update_inv_gloves_real()
 	remove_overlay(GLOVES_LAYER)
 	remove_overlay(GLOVESLEEVE_LAYER)
 
@@ -614,6 +617,9 @@ There are several things that need to be remembered:
 
 
 /mob/living/carbon/human/update_inv_shoes()
+	queue_icon_update(PENDING_UPDATE_INV_SHOES)
+
+/mob/living/carbon/human/update_inv_shoes_real()
 	remove_overlay(SHOES_LAYER)
 	remove_overlay(SHOESLEEVE_LAYER)
 	if(client && hud_used)
@@ -685,6 +691,9 @@ There are several things that need to be remembered:
 
 
 /mob/living/carbon/human/update_inv_head(hide_nonstandard = FALSE)
+	queue_icon_update(PENDING_UPDATE_INV_HEAD)
+
+/mob/living/carbon/human/update_inv_head_real(hide_nonstandard = FALSE)
 	remove_overlay(HEAD_LAYER)
 
 	if(!get_bodypart(BODY_ZONE_HEAD)) //Decapitated
@@ -715,6 +724,9 @@ There are several things that need to be remembered:
 	update_hair() //hoodies
 
 /mob/living/carbon/human/update_inv_belt(hide_experimental = FALSE)
+	queue_icon_update(PENDING_UPDATE_INV_BELT)
+
+/mob/living/carbon/human/update_inv_belt_real(hide_experimental = FALSE)
 	remove_overlay(BELT_LAYER)
 	remove_overlay(BELT_BEHIND_LAYER)
 
@@ -957,6 +969,9 @@ There are several things that need to be remembered:
 		apply_overlay(MASK_LAYER)
 
 /mob/living/carbon/human/update_inv_back(hide_experimental = FALSE)
+	queue_icon_update(PENDING_UPDATE_INV_BACK)
+
+/mob/living/carbon/human/update_inv_back_real(hide_experimental = FALSE)
 	remove_overlay(BACK_LAYER)
 	remove_overlay(BACK_BEHIND_LAYER)
 	remove_overlay(UNDER_CLOAK_LAYER)
@@ -1089,6 +1104,9 @@ There are several things that need to be remembered:
 	apply_overlay(UNDER_CLOAK_LAYER)
 
 /mob/living/carbon/human/update_inv_cloak()
+	queue_icon_update(PENDING_UPDATE_INV_CLOAK)
+
+/mob/living/carbon/human/update_inv_cloak_real()
 	remove_overlay(CLOAK_LAYER)
 	remove_overlay(CLOAK_BEHIND_LAYER)
 	remove_overlay(TABARD_LAYER)
@@ -1208,6 +1226,9 @@ There are several things that need to be remembered:
 	apply_overlay(UNDER_ARMOR_LAYER)
 
 /mob/living/carbon/human/update_inv_shirt()
+	queue_icon_update(PENDING_UPDATE_INV_SHIRT)
+
+/mob/living/carbon/human/update_inv_shirt_real()
 	remove_overlay(SHIRT_LAYER)
 	remove_overlay(SHIRTSLEEVE_LAYER)
 	update_body_parts(TRUE)
@@ -1271,6 +1292,9 @@ There are several things that need to be remembered:
 	apply_overlay(SHIRTSLEEVE_LAYER)
 
 /mob/living/carbon/human/update_inv_armor()
+	queue_icon_update(PENDING_UPDATE_INV_ARMOR)
+
+/mob/living/carbon/human/update_inv_armor_real()
 	remove_overlay(ARMOR_LAYER)
 	remove_overlay(ARMORSLEEVE_LAYER)
 
@@ -1338,6 +1362,9 @@ There are several things that need to be remembered:
 	apply_overlay(ARMORSLEEVE_LAYER)
 
 /mob/living/carbon/human/update_inv_pants()
+	queue_icon_update(PENDING_UPDATE_INV_PANTS)
+
+/mob/living/carbon/human/update_inv_pants_real()
 	remove_overlay(PANTS_LAYER)
 	remove_overlay(LEGSLEEVE_LAYER)
 

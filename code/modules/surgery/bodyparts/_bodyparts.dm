@@ -479,7 +479,7 @@
 	last_disable = world.time
 	if(owner)
 		owner.update_health_hud() //update the healthdoll
-		owner.update_body()
+		owner.queue_icon_update(PENDING_UPDATE_BODY)
 		owner.update_mobility()
 	return TRUE //if there was a change.
 
@@ -513,9 +513,7 @@
 
 	if(owner)
 		owner.updatehealth()
-		owner.update_body() //if our head becomes robotic, we remove the lizard horns and human hair.
-		owner.update_hair()
-		owner.update_damage_overlays()
+		owner.queue_icon_update(PENDING_UPDATE_BODY | PENDING_UPDATE_HAIR | PENDING_UPDATE_DAMAGE)
 
 /obj/item/bodypart/proc/is_organic_limb()
 	return (status == BODYPART_ORGANIC)

@@ -210,9 +210,7 @@
 
 	update_icon_dropped()
 	was_owner.update_health_hud() //update the healthdoll
-	was_owner.update_body()
-//	was_owner.update_hair() // dk how it's gonna fly
-	was_owner.update_body_parts()
+	was_owner.queue_icon_update(PENDING_UPDATE_BODY)
 	was_owner.update_mobility()
 
 	// drop_location = null happens when a "dummy human" used for rendering icons on prefs screen gets its limbs replaced.
@@ -426,9 +424,7 @@
 	update_bodypart_damage_state()
 
 	C.updatehealth()
-	C.update_body()
-	C.update_hair()
-	C.update_damage_overlays()
+	C.queue_icon_update(PENDING_UPDATE_BODY | PENDING_UPDATE_HAIR | PENDING_UPDATE_DAMAGE)
 	C.update_mobility()
 	return TRUE
 
