@@ -205,15 +205,15 @@
 	shifted_speed_increase = 1.35
 	shapeshift_type = /mob/living/simple_animal/hostile/retaliate/rogue/fox/witch_shifted
 
-/obj/effect/proc_holder/spell/targeted/shapeshift/witch/lesser_rous
-	name = "Lesser Rous Form"
+/obj/effect/proc_holder/spell/targeted/shapeshift/witch/rous
+	name = "Small Rous Form"
 	desc = ""
 	overlay_state = "rous_transform"
 	shifted_speed_increase = 1.45
 	shapeshift_type = /mob/living/simple_animal/hostile/retaliate/smallrat/witch_shifted
 
-/obj/effect/proc_holder/spell/targeted/shapeshift/witch/lesser_cabbit
-	name = "Lesser Cabbit Form"
+/obj/effect/proc_holder/spell/targeted/shapeshift/witch/cabbit
+	name = "Cabbit Form"
 	desc = ""
 	overlay_state = "cabbit_transform"
 	shifted_speed_increase = 1.45
@@ -265,7 +265,7 @@
 	defprob = 70
 
 /mob/living/simple_animal/hostile/retaliate/smallrat/witch_shifted
-	name = "lesser rous"
+	name = "small rous"
 	desc = "Supposedly sacred to Pestra, these small and occasionally pestilent creachurs are commonly found in pantries and ships. This one seems to be a bit more smarter than the others..."
 	defprob = 90
 	STASPD = 18
