@@ -773,7 +773,7 @@
 		var/can_write = FALSE
 		if((user.used_intent.blade_class == BCLASS_STAB) && (W.wlength == WLENGTH_SHORT))
 			can_write = TRUE
-		if(istype(W, /obj/item/needle/thorn))
+		if(istype(W, /obj/item/natural/thorn))
 			can_write = TRUE
 		if(istype(W, /obj/item/natural/feather))
 			can_write = TRUE
