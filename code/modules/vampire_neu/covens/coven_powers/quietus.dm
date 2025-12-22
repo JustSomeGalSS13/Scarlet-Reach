@@ -83,8 +83,8 @@
 		ADD_TRAIT(target, TRAIT_SILENT_FOOTSTEPS, "quietus")
 	if(!HAS_TRAIT(target, TRAIT_DEAF))
 		ADD_TRAIT(target, TRAIT_DEAF, "quietus")
-		if(target.confused < 2)
-			target.confused += 2
+		if(target.confused < 5)
+			target.confused += 5
 
 /datum/coven_power/quietus/silence_of_death/proc/remove_silence(mob/living/carbon/human/target)
 	if(HAS_TRAIT_FROM(target, TRAIT_DEAF, "quietus"))
