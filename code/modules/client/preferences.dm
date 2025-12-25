@@ -206,9 +206,13 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	var/rumour
 	var/rumour_display
-	
+
 	var/gossip
 	var/gossip_display
+
+	// backward-compatible alias used by some examine code
+	var/rumour_noble
+	var/rumour_noble_display
 
 	var/tail_type = /obj/item/bodypart/lamian_tail/lamian_tail
 	var/tail_color = "ffffff"
@@ -562,6 +566,10 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<br><b>[(length(flavortext) < MINIMUM_FLAVOR_TEXT) ? "<font color = '#802929'>" : ""]Flavortext:[(length(flavortext) < MINIMUM_FLAVOR_TEXT) ? "</font>" : ""]</b><a href='?_src_=prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=prefs;preference=flavortext;task=input'>Change</a>"
 
 			dat += "<br><b>[(length(ooc_notes) < MINIMUM_OOC_NOTES) ? "<font color = '#802929'>" : ""]OOC Notes:[(length(ooc_notes) < MINIMUM_OOC_NOTES) ? "</font>" : ""]</b><a href='?_src_=prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=prefs;preference=ooc_notes;task=input'>Change</a>"
+
+			// Rumours / Gossip
+			dat += "<br><b>Rumours:</b> <a href='?_src_=prefs;preference=rumour;task=input'>Change</a>"
+			dat += "<br><b>Noble Gossip:</b> <a href='?_src_=prefs;preference=gossip;task=input'>Change</a>"
 
 			if(agevetted)
 				dat += "<br><b>OOC Extra:</b> <a href='?_src_=prefs;preference=ooc_extra;task=input'>Change</a>"
@@ -1892,46 +1900,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						ShowChoices(user)
 						return
 					ooc_notes = new_ooc_notes
-									if("rumours")
-					to_chat(user, "<span class='notice'>["<span class='bold'>Flavortext should not include nonphysical nonsensory attributes such as backstory or the character's internal thoughts.</span>"]</span>")
-					var/new_rumour = input(user, "Input what others think of your character.", "Rumours", rumour) as message|null
-					if(new_rumour == null)
-						return
-					if(new_rumour == "")
-						rumour = null
-						ShowChoices(user)
-						return
-					rumour = new_rumour
-						ShowChoices(user)
-						return
-					rumour = new_rumour
-					var/ft = rumour
-					ft = html_encode(ft)
-					ft = replacetext(parsemarkdown_basic(ft), "\n", "<BR>")
-					rumour_display = ft
-					is_legacy = FALSE
-					to_chat(user, "<span class='notice'>Successfully updated rumours</span>")
-					log_game("[user] has set their rumours.")
-				if("gossip")
-					to_chat(user, "<span class='notice'>["<span class='bold'>Flavortext should not include nonphysical nonsensory attributes such as backstory or the character's internal thoughts.</span>"]</span>")
-					var/new_rumour_noble = input(user, "Input what other Nobles think of your character.", "gossip", gossip) as message|null
-					if(new_rumour_noble == null)
-						return
-					if(new_rumour_noble == "")
-						gossip = null
-						ShowChoices(user)
-						return
-					gossip = new_rumour_noble
-						ShowChoices(user)
-						return
-					gossip = new_rumour_noble
-					var/ft = gossip
-					ft = html_encode(ft)
-					ft = replacetext(parsemarkdown_basic(ft), "\n", "<BR>")
-					gossip_display = ft
-					is_legacy = FALSE
-					to_chat(user, "<span class='notice'>Successfully updated gossip</span>")
-					log_game("[user] has set their gossip.")
+
 
 					var/ooc = ooc_notes
 					ooc = html_encode(ooc)
@@ -1940,6 +1909,48 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					is_legacy = FALSE
 					to_chat(user, "<span class='notice'>Successfully updated OOC notes.</span>")
 					log_game("[user] has set their OOC notes'.")
+				if("rumour")
+					to_chat(user, "<span class='notice'>["<span class='bold'>Rumours are things others might know, or think they know about you, they don't necessarily have to be precise, or even true. But remember that they can provide a hint to another player on how to RP, interact with, or even think about your character.</span>"]</span>")
+					var/new_rumour = tgui_input_text(user, "Input rumours about your character:", "Rumours", rumour, multiline = TRUE, encode = FALSE, bigmodal = TRUE)
+					if(new_rumour == null)
+						return
+					if(new_rumour == "")
+						rumour = null
+						rumour_display = null
+						is_legacy = FALSE
+						ShowChoices(user)
+						return
+					rumour = new_rumour
+					var/r = rumour
+					r = html_encode(r)
+					r = replacetext(parsemarkdown_basic(r), "\n", "<BR>")
+					rumour_display = r
+					is_legacy = FALSE
+					to_chat(user, "<span class='notice'>Successfully updated Rumours</span>")
+					log_game("[user] has set their rumour'.")
+
+				if("gossip")
+					to_chat(user, "<span class='notice'>["<span class='bold'>Gossip is rumours spread around, and known only in Noble circles, only other well-born individuals are aware of it. Gossip, similarly to standard rumours does not need to be precise or true, but remember that it can provide hints and avenutes for other Nobles to RP, interact with, and judge your Character.</span>"]</span>")
+					var/new_gossip = tgui_input_text(user, "Input noble gossip about your character:", "Noble Gossip", gossip, multiline = TRUE, encode = FALSE, bigmodal = TRUE)
+					if(new_gossip == null)
+						return
+					if(new_gossip == "")
+						gossip = null
+						gossip_display = null
+						is_legacy = FALSE
+						ShowChoices(user)
+						return
+					gossip = new_gossip
+					var/g = gossip
+					g = html_encode(g)
+					g = replacetext(parsemarkdown_basic(g), "\n", "<BR>")
+					gossip_display = g
+					// Keep the legacy/alternate name in sync for examine checks
+					rumour_noble = gossip
+					rumour_noble_display = gossip_display
+					is_legacy = FALSE
+					to_chat(user, "<span class='notice'>Successfully updated Noble Gossip</span>")
+					log_game("[user] has set their noble gossip'.")
 				if("nsfw_headshot")
 					if(!user.check_agevet()) return
 					to_chat(user, "<span class='notice'>Finally a place to show it all.</span>")
