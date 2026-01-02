@@ -238,6 +238,30 @@
 	icon_state = "xylix_chalky" //mortosasye sprite
 	desc = "A Holy Rune of Xylix. You can hear the wind and distant bells, in the distance."
 
+/obj/structure/ritualcircle/xylix/Crossed(atom/movable/AM)
+	. = ..()
+
+	if(!isliving(AM))
+		return
+
+	var/mob/living/L = AM
+
+	if(L.buckled)
+		return
+	if(!(L.mobility_flags & MOBILITY_STAND))
+		return
+
+	// Only slip NON-Xylix patrons
+	if(L.patron?.type == /datum/patron/divine/xylix)
+		return
+
+	L.visible_message(
+		span_warning("[L] slips upon the Rune of Trickery!"),
+		span_danger("The rune betrays your footing!")
+	)
+
+	L.AdjustKnockdown(2)
+	
 /obj/structure/ritualcircle/ravox
 	name = "Rune of Justice"
 	icon_state = "ravox_chalky" // mortosasye sprite
