@@ -1,4 +1,4 @@
-// Withdraw Price used to be designed to match export price. 
+// Withdraw Price used to be designed to match export price.
 // However this meant that food were often too expensive to buy as raw materials
 // Now for food the withdraw price is set to be the same as the payout price
 // Theoretically this does create a perverse incentive to export food instead of selling it locally
@@ -10,7 +10,7 @@
 	held_items = list(2,4)
 	payout_price = 4
 	withdraw_price = 4
-	export_price = 8
+	export_price = 24
 	importexport_amt = 5
 	passive_generation = 3
 	stockpile_limit = 25
@@ -24,7 +24,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	passive_generation = 3
 	stockpile_limit = 50
@@ -38,7 +38,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	passive_generation = 3
 	stockpile_limit = 50
@@ -52,7 +52,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	passive_generation = 3
 	stockpile_limit = 50
@@ -66,7 +66,7 @@
 	payout_price = 4
 	withdraw_price = 4
 	transport_fee = 2
-	export_price = 8
+	export_price = 24
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -80,7 +80,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -94,7 +94,7 @@
 	payout_price = 4
 	withdraw_price = 4
 	transport_fee = 2
-	export_price = 8
+	export_price = 24
 	importexport_amt = 5
 	stockpile_limit = 25
 	passive_generation = 1
@@ -108,7 +108,7 @@
 	payout_price = 3
 	withdraw_price = 3
 	transport_fee = 1
-	export_price = 5
+	export_price = 15
 	importexport_amt = 5
 	stockpile_limit = 25
 	passive_generation = 2
@@ -122,7 +122,7 @@
 	payout_price = 3
 	withdraw_price = 3
 	transport_fee = 2
-	export_price = 5
+	export_price = 15
 	importexport_amt = 5
 	stockpile_limit = 25
 	passive_generation = 2
@@ -136,7 +136,7 @@
 	payout_price = 3
 	withdraw_price = 3
 	transport_fee = 1
-	export_price = 5
+	export_price = 15
 	importexport_amt = 5
 	stockpile_limit = 25
 	passive_generation = 2
@@ -150,7 +150,7 @@
 	payout_price = 1
 	withdraw_price = 1
 	transport_fee = 1
-	export_price = 2
+	export_price = 6
 	importexport_amt = 5
 	stockpile_limit = 25
 	passive_generation = 2
@@ -164,7 +164,7 @@
 	payout_price = 9
 	withdraw_price = 9
 	transport_fee = 3
-	export_price = 13
+	export_price = 39
 	importexport_amt = 5
 	stockpile_limit = 25
 	passive_generation = 1
@@ -178,7 +178,7 @@
 	payout_price = 3
 	withdraw_price = 3
 	transport_fee = 2
-	export_price = 5
+	export_price = 15
 	importexport_amt = 5
 	stockpile_limit = 25
 	passive_generation = 1
@@ -192,7 +192,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -206,7 +206,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -220,7 +220,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -234,7 +234,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -248,7 +248,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -262,7 +262,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -276,7 +276,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -290,7 +290,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -304,7 +304,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 4
+	export_price = 12
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -318,7 +318,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 4
+	export_price = 12
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -332,7 +332,7 @@
 	payout_price = 3
 	withdraw_price = 3
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -346,7 +346,7 @@
 	payout_price = 3
 	withdraw_price = 3
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2
@@ -360,7 +360,7 @@
 	payout_price = 3
 	withdraw_price = 3
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	stockpile_limit = 50
 	passive_generation = 2

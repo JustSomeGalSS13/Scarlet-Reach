@@ -6,7 +6,7 @@
 	payout_price = 2
 	withdraw_price = 2
 	transport_fee = 1
-	export_price = 3
+	export_price = 9
 	importexport_amt = 10
 	passive_generation = 3 // Apple here remain a clutch for wandering nobles because of sliced??? So higher amount
 	stockpile_limit = 50
@@ -19,7 +19,7 @@
     held_items = list(0, 4)
     payout_price = 2
     withdraw_price = 2
-    export_price = 3
+    export_price = 9
     importexport_amt = 5
     passive_generation = 2
     stockpile_limit = 25
@@ -32,7 +32,7 @@
     held_items = list(0, 4)
     payout_price = 2
     withdraw_price = 2
-    export_price = 3
+    export_price = 9
     importexport_amt = 5
     passive_generation = 2
     stockpile_limit = 25
@@ -45,7 +45,7 @@
     held_items = list(0, 4)
     payout_price = 2
     withdraw_price = 2
-    export_price = 3
+    export_price = 9
     importexport_amt = 5
     passive_generation = 2
     stockpile_limit = 25
@@ -58,7 +58,7 @@
     held_items = list(0, 4)
     payout_price = 2
     withdraw_price = 2
-    export_price = 3
+    export_price = 9
     importexport_amt = 5
     passive_generation = 2
     stockpile_limit = 25
@@ -71,7 +71,7 @@
     held_items = list(0, 4)
     payout_price = 2
     withdraw_price = 2
-    export_price = 3
+    export_price = 9
     importexport_amt = 5
     passive_generation = 2
     stockpile_limit = 25
@@ -84,7 +84,7 @@
     held_items = list(0, 4)
     payout_price = 2
     withdraw_price = 2
-    export_price = 3
+    export_price = 9
     importexport_amt = 5
     passive_generation = 2
     stockpile_limit = 25
@@ -97,7 +97,7 @@
     held_items = list(0, 4)
     payout_price = 2
     withdraw_price = 2
-    export_price = 3
+    export_price = 9
     importexport_amt = 5
     passive_generation = 2
     stockpile_limit = 25
@@ -110,7 +110,7 @@
     held_items = list(0, 4)
     payout_price = 2
     withdraw_price = 2
-    export_price = 3
+    export_price = 9
     importexport_amt = 5
     passive_generation = 2
     stockpile_limit = 25
@@ -123,7 +123,7 @@
     held_items = list(0, 4)
     payout_price = 2
     withdraw_price = 2
-    export_price = 3
+    export_price = 9
     importexport_amt = 5
     passive_generation = 2
     stockpile_limit = 25
@@ -150,7 +150,7 @@
     held_items = list(0, 4)
     payout_price = 2
     withdraw_price = 3
-    export_price = 4
+    export_price = 12
     importexport_amt = 5
     passive_generation = 2
     stockpile_limit = 25

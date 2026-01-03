@@ -267,6 +267,18 @@ SUBSYSTEM_DEF(treasury)
 	SStreasury.total_export += amt
 	SStreasury.log_to_steward("+[amt] exported [D.name]")
 	record_round_statistic(STATS_STOCKPILE_EXPORTS_VALUE, amt)
+	if(D.category == "Foodstuffs" || D.category == "Fruits")
+		var/total_crops = 0
+		for(var/farmer in D.farmers)
+			total_crops += D.farmers[farmer]
+		if(total_crops <= 0)
+			return
+		for(var/farmer in D.farmers)
+			var/contributed = D.farmers[farmer]
+			var/percent = (contributed / total_crops)
+			var/cropshare = round(0.5 * (amt * percent))
+			SStreasury.give_money_account(cropshare, farmer, "Cropshare")
+		D.farmers = list()
 	if(!silent && amt >= EXPORT_ANNOUNCE_THRESHOLD) //Only announce big spending.
 		scom_announce("Scarlet Reach exports [D.name] for [amt] mammon.")
 	D.lower_demand()
