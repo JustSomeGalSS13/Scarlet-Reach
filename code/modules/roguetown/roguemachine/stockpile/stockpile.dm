@@ -111,13 +111,13 @@
 			if(B.stacktype == R.item_type)
 				var/nopay = R.held_items[stockpile_index] >= R.stockpile_limit // Check whether it is overflowed BEFORE nopaying them
 				R.held_items[stockpile_index] += B.amount
-				if((R.category == "Foodstuffs" || R.category == "Fruits") && !I.from_stockpile)
+				if(!I.from_stockpile)
 					if(R.farmers[H])
 						R.farmers[H] += B.amount
 					else
 						R.farmers[H] = B.amount
 				if(message == TRUE)
-					stock_announce("[B.amount] units of [R.name] has been stockpiled.")
+					stock_announce("[H.name] increases their [R.name] sharecrop.")
 				qdel(B)
 				if(sound == TRUE)
 					playsound(loc, 'sound/misc/hiss.ogg', 100, FALSE, -1)
@@ -141,13 +141,13 @@
 			if(!R.mint_item)
 				R.held_items[stockpile_index] += 1 //stacked logs need to check for multiple
 				qdel(I)
-				if((R.category == "Foodstuffs" || R.category == "Fruits") && !I.from_stockpile)
+				if(!I.from_stockpile)
 					if(R.farmers[H])
 						R.farmers[H] += 1
 					else
 						R.farmers[H] = 1
 				if(message == TRUE)
-					stock_announce("[R.name] has been stockpiled.")
+					stock_announce("[H.name] increases their [R.name] sharecrop.")
 				if(sound == TRUE)
 					playsound(loc, 'sound/misc/hiss.ogg', 100, FALSE, -1)
 			else

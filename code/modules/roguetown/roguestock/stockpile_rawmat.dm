@@ -19,8 +19,8 @@
 	payout_price = 4
 	withdraw_price = 4
 	transport_fee = 4
-	export_price = 6
-	importexport_amt = 10
+	export_price = 12
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 
@@ -32,7 +32,7 @@
 	payout_price = 5
 	withdraw_price = 5
 	transport_fee = 10
-	export_price = 10
+	export_price = 20
 	stockpile_limit = 50
 	importexport_amt = 5
 	passive_generation = 1
@@ -58,7 +58,7 @@
 	payout_price = 4
 	withdraw_price = 4
 	transport_fee = 5
-	export_price = 5
+	export_price = 12
 	importexport_amt = 5
 	stockpile_limit = 25
 	passive_generation = 3
@@ -71,8 +71,8 @@
 	payout_price = 5
 	withdraw_price = 5
 	transport_fee = 6
-	export_price = 8
-	importexport_amt = 10
+	export_price = 16
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 
@@ -84,8 +84,8 @@
 	payout_price = 3
 	withdraw_price = 3
 	transport_fee = 3
-	export_price = 5
-	importexport_amt = 10
+	export_price = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 
@@ -97,8 +97,8 @@
 	payout_price = 4
 	withdraw_price = 4
 	transport_fee = 4
-	export_price = 5
-	importexport_amt = 10
+	export_price = 12
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 
@@ -112,7 +112,7 @@
 	transport_fee = 10
 	export_price = 75
 	stockpile_limit = 50
-	importexport_amt = 10
+	importexport_amt = 5
 
 /datum/roguestock/stockpile/silver
 	name = "Raw Silver"
@@ -175,8 +175,8 @@
 	payout_price = 3
 	withdraw_price = 3
 	transport_fee = 3
-	export_price = 7
-	importexport_amt = 10
+	export_price = 14
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 3
 
@@ -188,7 +188,7 @@
 	payout_price = 8
 	withdraw_price = 8
 	transport_fee = 2
-	export_price = 12
+	export_price = 24
 	importexport_amt = 5
 	stockpile_limit = 25
 	passive_generation = 2
@@ -201,7 +201,7 @@
 	payout_price = 10
 	withdraw_price = 10
 	transport_fee = 4
-	export_price = 15
+	export_price = 30
 	importexport_amt = 5
 	stockpile_limit = 25
 	passive_generation = 1

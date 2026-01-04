@@ -7,7 +7,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 9
-	importexport_amt = 10
+	importexport_amt = 5
 	passive_generation = 3 // Apple here remain a clutch for wandering nobles because of sliced??? So higher amount
 	stockpile_limit = 50
 	category = "Fruits"
@@ -138,7 +138,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 4
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50 // Jackberries are used to mass produce raisins so higher limit
 	passive_generation = 2
 	category = "Fruits"

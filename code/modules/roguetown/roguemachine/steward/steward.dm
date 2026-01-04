@@ -405,7 +405,7 @@
 				var/scriptext = "FALSE"
 				if(SStreasury.allow_scrip)
 					scriptext = "TRUE"
-				contents += "<center>Allow Scrip Conversion:<a href='?src=\ref[src];allowscrip=1'>[scriptext]</a></center><BR>"
+				contents += "<center>Allow Marks Conversion:<a href='?src=\ref[src];allowscrip=1'>[scriptext]</a></center><BR>"
 				var/selection = "<center>Categories: "
 				for(var/category in categories)
 					if(category == current_category)

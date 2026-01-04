@@ -25,7 +25,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	passive_generation = 3
 	stockpile_limit = 50
 	category = "Foodstuffs"
@@ -39,7 +39,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	passive_generation = 3
 	stockpile_limit = 50
 	category = "Foodstuffs"
@@ -53,7 +53,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	passive_generation = 3
 	stockpile_limit = 50
 	category = "Foodstuffs"
@@ -67,7 +67,7 @@
 	withdraw_price = 8
 	transport_fee = 2
 	export_price = 16
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -81,7 +81,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -193,7 +193,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -207,7 +207,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -221,7 +221,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -235,7 +235,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -249,7 +249,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -263,7 +263,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -277,7 +277,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -291,7 +291,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 6
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -305,7 +305,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 8
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -319,7 +319,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 8
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -333,7 +333,7 @@
 	withdraw_price = 8
 	transport_fee = 1
 	export_price = 26
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -347,7 +347,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 18
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
@@ -361,7 +361,7 @@
 	withdraw_price = 4
 	transport_fee = 1
 	export_price = 18
-	importexport_amt = 10
+	importexport_amt = 5
 	stockpile_limit = 50
 	passive_generation = 2
 	category = "Foodstuffs"
