@@ -246,6 +246,14 @@
 
 		S.falloff = (falloff ? falloff : FALLOFF_SOUNDS)
 
+		// Apply z-level echo effect to muffle sounds across vertical distance
+		if(dz != 0)
+			var/env_offset = abs(dz) * ZSOUND_DRYLOSS_PER_Z
+			var/list/echo_list = new(18) // EAX has 18(!) echo channels, but only channels 1 & 2 actually work without a soundblaster.
+			echo_list[ECHO_DIRECT] = env_offset // Reduce dry channel (unmixed sound)
+			echo_list[ECHO_ROOM] = 0
+			S.echo = echo_list
+
 
 	if(repeat && istype(repeat, /datum/looping_sound))
 		var/datum/looping_sound/D = repeat
