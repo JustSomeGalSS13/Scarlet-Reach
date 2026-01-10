@@ -6,7 +6,7 @@
 	detail_tag = "_detail"
 	slot_flags = ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_SMALL
-	detail_color = CLOTHING_MAGE_BLUE
+	detail_color = CLOTHING_SCARLET
 
 	dropshrink = 0.7
 	grid_height = 32
@@ -15,7 +15,7 @@
 	var/hear_distance = 40 // Might need to be adjusted later.
 	// if other roles needed these it can be subtyped with this. in the future it might be better to bind these
 	// to players but that's not really necessary atm
-	var/list/servant_types = list(/datum/job/butler, /datum/job/servant)
+	var/list/servant_types = list(/datum/job/roguetown/butler, /datum/job/roguetown/servant)
 
 	COOLDOWN_DECLARE(nearby_ring_bell)
 	var/nearby_cooldown = 5 SECONDS

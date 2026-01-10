@@ -93,7 +93,7 @@
 /datum/crafting_recipe/roguetown/leather/container/belt/suspenders
 	name = "suspenders"
 	result = /obj/item/storage/belt/leather/suspenders
-	requirements = list(
+	reqs = list(
 		/obj/item/natural/hide/cured = 1,
 		/obj/item/natural/cloth = 2,
 		/obj/item/natural/fibers = 1,

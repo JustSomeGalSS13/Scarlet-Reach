@@ -1403,20 +1403,20 @@ datum/crafting_recipe/roguetown/sewing/Purdress
 /datum/crafting_recipe/roguetown/sewing/maiddress
 	name = "maid dress"
 	result = list(/obj/item/clothing/shirt/dress/maid)
-	requirements = list(/obj/item/natural/cloth = 3,
+	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 2)
 	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/sewing/tailcoat
 	name =  "tailcoat"
 	result = list(/obj/item/clothing/armor/gambeson/tailcoat)
-	requirements = list(/obj/item/natural/cloth = 3,
+	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 2)
 	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/sewing/formaltrousers
 	name = "formal trousers"
 	result = list(/obj/item/clothing/pants/trou/formal)
-	requirements = list(/obj/item/natural/cloth = 3,
+	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 2)
 	craftdiff = 4

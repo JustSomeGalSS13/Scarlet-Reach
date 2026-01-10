@@ -79,7 +79,7 @@
 	armor = /obj/item/clothing/armor/gambeson/tailcoat/lord
 	shirt = /obj/item/clothing/shirt/undershirt/formal
 	pants = /obj/item/clothing/pants/trou/formal
-	shoes = /obj/item/clothing/shoes/nobleboot
+	shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
 	backl = /obj/item/storage/backpack/rogue/satchel
 	belt = /obj/item/storage/belt/leather/suspenders // Aware that these render over shit like coats. it's a problem for another day, in my time.
 	beltr = /obj/item/storage/keyring/servant
@@ -157,7 +157,7 @@
 	armor = /obj/item/clothing/armor/gambeson/tailcoat/lord
 	shirt = /obj/item/clothing/shirt/undershirt/formal
 	pants = /obj/item/clothing/pants/trou/formal
-	shoes = /obj/item/clothing/shoes/nobleboot
+	shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
 	backl = /obj/item/storage/backpack/rogue/satchel
 	belt = /obj/item/storage/belt/leather/suspenders // Aware that these render over shit like coats. it's a problem for another day, in my time.
 	beltr = /obj/item/storage/keyring/servant
