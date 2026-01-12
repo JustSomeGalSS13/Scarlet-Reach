@@ -127,18 +127,6 @@ SUBSYSTEM_DEF(soundloopers)
 				mob.playsound_local(loop_parent, loop.cursound, loop.volume, loop.vary, loop.frequency, loop.falloff, found_sound.channel, FALSE, found_sound, repeat = loop, override = use_override)
 				found_loop["PIXEL_X"] = pixel_x
 				found_loop["PIXEL_Y"] = pixel_y
-			//We are close enough to hear, update position
-			// Always update when camera has moved to keep projection matrix current
-			var/prev_pixel_x = found_loop["PIXEL_X"]
-			var/prev_pixel_y = found_loop["PIXEL_Y"]
-			if(pixel_x != prev_pixel_x || pixel_y != prev_pixel_y)
-				// Re-calculate position with projection matrices
-				// playsound_local should handle distance falloff, z-level sound, camera compensation, master volume, etc.
-				var/use_override = found_loop["OVERRIDE"] ? TRUE : FALSE
-
-				mob.playsound_local(loop_parent, loop.cursound, loop.volume, loop.vary, loop.frequency, loop.falloff, found_sound.channel, FALSE, found_sound, repeat = loop, override = use_override)
-				found_loop["PIXEL_X"] = pixel_x
-				found_loop["PIXEL_Y"] = pixel_y
 
 				if(loop.persistent_loop && found_loop["MUTESTATUS"] == TRUE) //It was out of range and now back in range, reset it
 					found_loop["MUTESTATUS"] = FALSE
